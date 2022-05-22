@@ -8,6 +8,7 @@
   color: blue;
   text-decoration: none;
   font-size: 12px;
+  padding: 5px;
 }
 .navbar a:hover {
   text-decoration: underline;
@@ -29,6 +30,7 @@
 
 .appsIcon {
   border-radius: 60%;
+  padding: 5px;
 }
 .appsIcon:hover {
   background-image: -moz-linear-gradient(

@@ -9,21 +9,16 @@ function Navbar() {
       <nav className='navbar'>
         <div className='container'>
           <ul className='nav'>
-            <li>
-              <a href='#'>Gmail</a>
-            </li>
-            <li>
-              <a href='#'>Images</a>
-            </li>
-            <li>
-              <AppsIcon className='appsIcon'>apps</AppsIcon>
-            </li>
-            <li>
-              <img
-                className='profilePicture'
-                src='https://lh3.googleusercontent.com/ogw/ADea4I546A71zoRb5SbYy8YXipugWmnq7H6jvzAcY56SOw=s32-c-mo'
-              />
-            </li>
+            <a href='#'>Gmail</a>
+
+            <a href='#'>Images</a>
+
+            <AppsIcon className='appsIcon'>apps</AppsIcon>
+
+            <img
+              className='profilePicture'
+              src='https://lh3.googleusercontent.com/ogw/ADea4I546A71zoRb5SbYy8YXipugWmnq7H6jvzAcY56SOw=s32-c-mo'
+            />
           </ul>
         </div>
       </nav>
