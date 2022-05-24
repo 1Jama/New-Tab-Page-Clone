@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: white;
+  margin-left: 50px;
+}
+
+.shortcut {
+  align-self: center;
+  flex: 0 0 18.5%;
+}
+
+.title {
+  background-color: white;
+  border-radius: 20px;
+  width: 150px;
+  text-align: center;
+}
