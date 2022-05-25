@@ -1,11 +1,15 @@
-.container {
+.sCut .container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+
   justify-content: center;
-  align-content: center;
   align-items: center;
-  gap: 5px;
+  align-content: center;
+
+  background-color: aqua;
+
+  /*   gap: 5px; */
 }
 
 .image {
@@ -18,7 +22,8 @@
 
 .shortcut {
   align-self: center;
-  flex: 0 0 18.5%;
+
+  flex: 1 1 17%;
 }
 
 .title {
@@ -26,4 +31,7 @@
   border-radius: 20px;
   width: 150px;
   text-align: center;
+}
+* {
+  box-sizing: border-box;
 }

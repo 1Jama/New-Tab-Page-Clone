@@ -1,7 +1,5 @@
-import logo from './logo.svg'
 import './Navbar.css'
 import AppsIcon from '@mui/icons-material/Apps'
-import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 
 function Navbar() {
   return (

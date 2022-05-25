@@ -1,4 +1,3 @@
-import logo from './logo.svg'
 import './Shortcuts.css'
 import { sData } from './sData'
 
@@ -13,12 +12,12 @@ import { sData } from './sData'
 
 const Shortcuts = () => {
   return (
-    <div>
+    <div className='sCut'>
       <div className='container'>
         {sData.map((shortcut, i) => {
           return (
             <article key={i} className='shortcut'>
-              <img className='image' src={shortcut.image} />
+              <img className='image' src={shortcut.image} alt='' />
               <h1 className='title '>{shortcut.title}</h1>
             </article>
           )

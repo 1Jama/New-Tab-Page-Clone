@@ -1,13 +1,16 @@
 .navbar .container {
   display: flex;
+  flex-direction: row;
   justify-content: end;
   align-items: center;
+  align-content: center;
   height: 100%;
+  gap: 10px;
 }
 .navbar a {
   color: blue;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 18px;
   padding: 5px;
 }
 .navbar a:hover {
@@ -24,13 +27,14 @@
 
 .profilePicture {
   border-radius: 50%;
-  width: 80%;
-  height: auto;
+  width: 42px;
+  height: 42px;
 }
 
 .appsIcon {
-  border-radius: 60%;
-  padding: 5px;
+  transform: scale(1.3);
+  border-radius: 50%;
+  padding: 8px;
 }
 .appsIcon:hover {
   background-image: -moz-linear-gradient(

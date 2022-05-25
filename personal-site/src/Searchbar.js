@@ -3,7 +3,7 @@ import './Searchbar.css'
 
 function Searchbar() {
   return (
-    <div className='App'>
+    <div className='sBar'>
       <article className='container'>
         <div className='logo'>
           <img
@@ -11,6 +11,7 @@ function Searchbar() {
             src='https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'
           />
         </div>
+
         <div className='bar'>
           <input
             className='searchbar'
