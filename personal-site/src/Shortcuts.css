@@ -1,4 +1,9 @@
+.sCut {
+  display: flex;
+  justify-content: center;
+}
 .sCut .container {
+  margin-top: 40px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -6,10 +11,6 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-
-  background-color: aqua;
-
-  /*   gap: 5px; */
 }
 
 .image {
@@ -17,11 +18,27 @@
   height: 48px;
   border-radius: 50%;
   background-color: white;
-  margin-left: 50px;
+}
+.shortcut .vert {
+  vertical-align: top;
+  align-self: flex-end;
+}
+.vert {
+  opacity: 0;
+}
+
+.shortcut:hover .vert {
+  -webkit-transition: opacity 1s ease-out;
+  -moz-transition: opacity 1s ease-out;
+  -ms-transition: opacity 1s ease-out;
+  -o-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+  opacity: 1;
 }
 
 .shortcut {
-  align-self: center;
+  display: flex;
+  justify-content: center;
 
   flex: 1 1 17%;
 }
@@ -29,8 +46,12 @@
 .title {
   background-color: white;
   border-radius: 20px;
-  width: 150px;
+  overflow-wrap: break-word;
+  max-width: 80px;
   text-align: center;
+
+  margin-top: 0px;
+  margin-bottom: 15px;
 }
 * {
   box-sizing: border-box;

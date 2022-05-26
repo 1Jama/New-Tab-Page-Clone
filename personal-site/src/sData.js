@@ -44,7 +44,7 @@ export const sData = [
   },
   {
     image:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/OOjs_UI_icon_add.svg/2048px-OOjs_UI_icon_add.svg.png',
+      'https://cdn0.iconfinder.com/data/icons/very-basic-2-android-l-lollipop-icon-pack/24/plus-512.png',
     title: 'Add Shortcut',
   },
 ]

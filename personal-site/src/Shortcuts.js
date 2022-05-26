@@ -1,5 +1,6 @@
 import './Shortcuts.css'
 import { sData } from './sData'
+import { MoreVert, MoreVertOutlined } from '@mui/icons-material'
 
 /* const shortcut = ({ image, title }) => {
   return (
@@ -16,10 +17,13 @@ const Shortcuts = () => {
       <div className='container'>
         {sData.map((shortcut, i) => {
           return (
-            <article key={i} className='shortcut'>
-              <img className='image' src={shortcut.image} alt='' />
-              <h1 className='title '>{shortcut.title}</h1>
-            </article>
+            <div key={i} className='shortcut'>
+              <div>
+                <img className='image' src={shortcut.image} alt='' />
+                <MoreVert className='vert' />
+                <p className='title '>{shortcut.title}</p>
+              </div>
+            </div>
           )
         })}
       </div>

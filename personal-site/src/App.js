@@ -8,8 +8,10 @@ function App() {
   return (
     <>
       <Navbar />
-      <Searchbar />
-      <Shortcuts />
+      <div className='appContainer'>
+        <Searchbar />
+        <Shortcuts />
+      </div>
     </>
   )
 }
