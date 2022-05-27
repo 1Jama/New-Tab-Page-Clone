@@ -1,6 +1,9 @@
 import './Shortcuts.css'
 import { sData } from './sData'
 import { MoreVert, MoreVertOutlined } from '@mui/icons-material'
+import React, { useState } from 'react'
+import PopUp from './PopUp'
+import SForm from './SForm'
 
 /* const shortcut = ({ image, title }) => {
   return (
@@ -12,6 +15,7 @@ import { MoreVert, MoreVertOutlined } from '@mui/icons-material'
 } */
 
 const Shortcuts = () => {
+  const [open, setOpen] = useState(false)
   return (
     <div className='sCut'>
       <div className='container'>
@@ -26,7 +30,21 @@ const Shortcuts = () => {
             </div>
           )
         })}
+        <div className='shortcut'>
+          <div className='addShrt' onClick={() => setOpen(true)}>
+            <img
+              className='image'
+              src='https://cdn0.iconfinder.com/data/icons/very-basic-2-android-l-lollipop-icon-pack/24/plus-512.png'
+              alt=''
+            />
+            <MoreVert className='vert' />
+            <p className='title '>Add Shortcut</p>
+          </div>
+        </div>
       </div>
+      <PopUp trigger={open} setTrigger={setOpen}>
+        <SForm />
+      </PopUp>
     </div>
   )
 }

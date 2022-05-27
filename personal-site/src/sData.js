@@ -42,9 +42,4 @@ export const sData = [
     image: 'https://static.netify.ai/logos/k/i/j/xvwvwv/icon.png?v=1',
     title: 'Kijiji',
   },
-  {
-    image:
-      'https://cdn0.iconfinder.com/data/icons/very-basic-2-android-l-lollipop-icon-pack/24/plus-512.png',
-    title: 'Add Shortcut',
-  },
 ]

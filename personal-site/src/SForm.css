@@ -1,0 +1,25 @@
+.sForm {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: white;
+}
+.tFld {
+  align-self: center;
+  width: 472px;
+}
+.heading {
+  margin-left: 10px;
+}
+.Button {
+  align-self: flex-end;
+  width: 10px;
+}
+.bCont {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: space-around;
+  padding: 15px;
+}
