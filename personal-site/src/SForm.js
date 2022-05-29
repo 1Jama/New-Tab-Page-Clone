@@ -6,7 +6,7 @@ import './SForm.css';
 import Shortcuts from './Shortcuts';
 
 export const SForm = (props) => {
-  const [urlValue, setUrlValue] = useState('');
+  const [url, setUrl] = useState('');
   const [nameValue, setNameValue] = useState('');
   const image =
     'https://www.citypng.com/public/uploads/preview/-11594687246vzsjesy7bd.png';
@@ -14,11 +14,11 @@ export const SForm = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const newShortcut = { image, nameValue, urlValue };
+    const newShortcut = { image, nameValue, url };
 
     /*  const name1 = newShortcut.nameValue;
     const url1 = newShortcut.urlValue; */
-    if (nameValue && urlValue) {
+    if (nameValue && url) {
       props.onSubmit(newShortcut);
     }
 
@@ -47,8 +47,8 @@ export const SForm = (props) => {
         </label>
         <TextField
           className='tFld'
-          value={urlValue}
-          onChange={(e) => setUrlValue(e.target.value)}
+          value={url}
+          onChange={(e) => setUrl(e.target.value)}
           hiddenLabel
           id='url'
           variant='filled'
