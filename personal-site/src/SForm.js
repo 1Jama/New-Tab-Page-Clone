@@ -1,23 +1,28 @@
 import { TextField } from '@mui/material';
 import React, { useState } from 'react';
 import { Button } from '@mui/material';
-import { Shortcut } from '@mui/icons-material';
+import { NewReleases, Shortcut } from '@mui/icons-material';
 import './SForm.css';
 import Shortcuts from './Shortcuts';
 
-export const SForm = (onSubmit) => {
+export const SForm = (props) => {
   const [urlValue, setUrlValue] = useState('');
   const [nameValue, setNameValue] = useState('');
+  const image =
+    'https://www.citypng.com/public/uploads/preview/-11594687246vzsjesy7bd.png';
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const newShortcut = { nameValue, urlValue };
+    const newShortcut = { image, nameValue, urlValue };
 
     /*  const name1 = newShortcut.nameValue;
     const url1 = newShortcut.urlValue; */
-    onSubmit = { newShortcut };
-    console.log(onSubmit);
+    if (nameValue && urlValue) {
+      props.onSubmit(newShortcut);
+    }
+
+    props.changeState(false);
   };
   return (
     <div className='popupContainer'>
@@ -50,11 +55,7 @@ export const SForm = (onSubmit) => {
           size='small'
         />
         <div className='bCont'>
-          <Button
-            className='Button'
-            variant='contained'
-            onClick={() => this.props.setTrigger(false)}
-          >
+          <Button className='Button' variant='contained' onClick={handleSubmit}>
             Close
           </Button>
           <Button

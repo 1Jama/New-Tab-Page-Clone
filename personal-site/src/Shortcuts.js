@@ -17,14 +17,9 @@ import SForm from './SForm';
 const Shortcuts = () => {
   const [open, setOpen] = useState(false);
   const [shortcutData, setShortcutData] = useState(sData);
-  const [nameValue, setnameValue] = useState('');
-  const [url, setUrl] = useState('');
-  const [data, setData] = useState(nameValue, url);
 
   const saveNewData = (data) => {
-    this.setData(data);
-
-    //console.log(data);
+    console.log(data);
 
     console.log(shortcutData);
 
@@ -32,6 +27,11 @@ const Shortcuts = () => {
     setShortcutData((shortcutData) => {
       return [...shortcutData, data];
     });
+  };
+
+  const closePopup = (popupState) => {
+    console.log(popupState);
+    setOpen(popupState);
   };
 
   return (
@@ -63,7 +63,7 @@ const Shortcuts = () => {
         </div>
       </div>
       <PopUp trigger={open} setTrigger={setOpen}>
-        <SForm onSubmit={saveNewData} />
+        <SForm onSubmit={saveNewData} changeState={closePopup} />
       </PopUp>
     </div>
   );
