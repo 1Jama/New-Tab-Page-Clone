@@ -1,34 +1,54 @@
-import './Shortcuts.css'
-import { sData } from './sData'
-import { MoreVert, MoreVertOutlined } from '@mui/icons-material'
-import React, { useState } from 'react'
-import PopUp from './PopUp'
-import SForm from './SForm'
+import './Shortcuts.css';
+import { sData } from './sData';
+import { MoreVert, MoreVertOutlined } from '@mui/icons-material';
+import React, { useState } from 'react';
+import PopUp from './PopUp';
+import SForm from './SForm';
 
-/* const shortcut = ({ image, title }) => {
+/* const shortcut = ({ image, name}) => {
   return (
     <article className='shortcut'>
       <img src={image} />
-      <h1>{title}</h1>
+      <h1>{name}</h1>
     </article>
   )
 } */
 
 const Shortcuts = () => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
+  const [shortcutData, setShortcutData] = useState(sData);
+  const [nameValue, setnameValue] = useState('');
+  const [url, setUrl] = useState('');
+  const [data, setData] = useState(nameValue, url);
+
+  const saveNewData = (data) => {
+    this.setData(data);
+
+    //console.log(data);
+
+    console.log(shortcutData);
+
+    //const newShortcutData = [...shortcutData, data];
+    setShortcutData((shortcutData) => {
+      return [...shortcutData, data];
+    });
+  };
+
   return (
     <div className='sCut'>
       <div className='container'>
-        {sData.map((shortcut, i) => {
+        {shortcutData.map((shortcut, i) => {
           return (
             <div key={i} className='shortcut'>
-              <div>
-                <img className='image' src={shortcut.image} alt='' />
-                <MoreVert className='vert' />
-                <p className='title '>{shortcut.title}</p>
-              </div>
+              <a href={shortcut.url}>
+                <div>
+                  <img className='image' src={shortcut.image} alt='' />
+                  <MoreVert className='vert' />
+                  <p className='name'>{shortcut.nameValue}</p>
+                </div>
+              </a>
             </div>
-          )
+          );
         })}
         <div className='shortcut'>
           <div className='addShrt' onClick={() => setOpen(true)}>
@@ -38,15 +58,15 @@ const Shortcuts = () => {
               alt=''
             />
             <MoreVert className='vert' />
-            <p className='title '>Add Shortcut</p>
+            <p className='name'>Add Shortcut</p>
           </div>
         </div>
       </div>
       <PopUp trigger={open} setTrigger={setOpen}>
-        <SForm />
+        <SForm onSubmit={saveNewData} />
       </PopUp>
     </div>
-  )
-}
+  );
+};
 
-export default Shortcuts
+export default Shortcuts;

@@ -1,60 +1,74 @@
-import { TextField } from '@mui/material'
-import React, { useState } from 'react'
-import { Button, Paper } from '@mui/material'
-import { Shortcut } from '@mui/icons-material'
-import './SForm.css'
+import { TextField } from '@mui/material';
+import React, { useState } from 'react';
+import { Button } from '@mui/material';
+import { Shortcut } from '@mui/icons-material';
+import './SForm.css';
+import Shortcuts from './Shortcuts';
 
-export const SForm = () => {
-  const [textValue, setTextValue] = useState('')
-  const [url, setUrl] = useState('')
-  const [title, setTitle] = useState('')
+export const SForm = (onSubmit) => {
+  const [urlValue, setUrlValue] = useState('');
+  const [nameValue, setNameValue] = useState('');
 
-  const onTextChange = (e) => setTextValue(e.target.value)
   const handleSubmit = (e) => {
-    e.preventDefault()
-    const shortcut = { title, url }
-  }
-  return (
-    <div className='sForm'>
-      <h3 className='heading'>Add shortcut</h3>
-      <p className='title'>Name</p>
-      <TextField
-        className='tFld'
-        onChange={onTextChange}
-        value={title}
-        hiddenLabel
-        id='filled-hidden-label-small'
-        defaultValue='Small'
-        variant='filled'
-        size='small'
-      />
-      <br />
-      <br />
-      <p className='title'>URL</p>
-      <TextField
-        className='tFld'
-        onChange={onTextChange}
-        value={url}
-        hiddenLabel
-        id='filled-hidden-label-small'
-        defaultValue='Small'
-        variant='filled'
-        size='small'
-      />
-      <div className='bCont'>
-        <Button
-          className='Button'
-          variant='contained'
-          onClick={() => this.props.setTrigger(false)}
-        >
-          Close
-        </Button>
-        <Button className='Button' variant='contained' onClick={handleSubmit}>
-          Done
-        </Button>
-      </div>
-    </div>
-  )
-}
+    e.preventDefault();
 
-export default SForm
+    const newShortcut = { nameValue, urlValue };
+
+    /*  const name1 = newShortcut.nameValue;
+    const url1 = newShortcut.urlValue; */
+    onSubmit = { newShortcut };
+    console.log(onSubmit);
+  };
+  return (
+    <div className='popupContainer'>
+      <form className='popupPadding'>
+        <h3 className='heading'>Add shortcut</h3>
+        <label htmlFor='name' className='name'>
+          Name
+        </label>
+        <TextField
+          className='tFld'
+          value={nameValue}
+          onChange={(e) => setNameValue(e.target.value)}
+          hiddenLabel
+          id='name'
+          variant='filled'
+          size='small'
+        />
+        <br />
+        <br />
+        <label htmlFor='url' className='name'>
+          URL
+        </label>
+        <TextField
+          className='tFld'
+          value={urlValue}
+          onChange={(e) => setUrlValue(e.target.value)}
+          hiddenLabel
+          id='url'
+          variant='filled'
+          size='small'
+        />
+        <div className='bCont'>
+          <Button
+            className='Button'
+            variant='contained'
+            onClick={() => this.props.setTrigger(false)}
+          >
+            Close
+          </Button>
+          <Button
+            type='submit'
+            className='Button'
+            variant='contained'
+            onClick={handleSubmit}
+          >
+            Done
+          </Button>
+        </div>
+      </form>
+    </div>
+  );
+};
+
+export default SForm;

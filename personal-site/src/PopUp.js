@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import './PopUp.css'
-import { Button, Paper } from '@mui/material'
+import React, { useState } from 'react';
+import './PopUp.css';
+import { Button, Paper } from '@mui/material';
 //import ModalButton from './modal-button'
 
 function PopUp(props) {
@@ -17,7 +17,7 @@ function PopUp(props) {
     </>
   ) : (
     ''
-  )
+  );
 }
 
-export default PopUp
+export default PopUp;
