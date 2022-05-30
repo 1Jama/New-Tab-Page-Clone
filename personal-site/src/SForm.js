@@ -8,8 +8,7 @@ import Shortcuts from './Shortcuts';
 export const SForm = (props) => {
   const [url, setUrl] = useState('');
   const [nameValue, setNameValue] = useState('');
-  const image =
-    'https://www.citypng.com/public/uploads/preview/-11594687246vzsjesy7bd.png';
+  const image = url + '/favicon.ico';
 
   const handleSubmit = (e) => {
     e.preventDefault();
