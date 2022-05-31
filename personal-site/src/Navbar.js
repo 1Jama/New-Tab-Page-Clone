@@ -1,5 +1,6 @@
-import './Navbar.css'
-import AppsIcon from '@mui/icons-material/Apps'
+import React, { Component } from 'react';
+import './Navbar.css';
+import AppsIcon from '@mui/icons-material/Apps';
 
 function Navbar() {
   return (
@@ -21,7 +22,7 @@ function Navbar() {
         </div>
       </nav>
     </div>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

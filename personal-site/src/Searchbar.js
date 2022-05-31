@@ -1,5 +1,6 @@
-import logo from './logo.svg'
-import './Searchbar.css'
+import logo from './logo.svg';
+import React, { Component } from 'react';
+import './Searchbar.css';
 
 function Searchbar() {
   return (
@@ -28,7 +29,7 @@ function Searchbar() {
         </div>
       </article>
     </div>
-  )
+  );
 }
 
-export default Searchbar
+export default Searchbar;
